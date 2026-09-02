@@ -1,0 +1,827 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>document.documentElement.classList.add("js");</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhim Gurung — Global CEO, GBMIC</title>
+  <meta name="description" content="Bhim Gurung, Global CEO of Global Business Management & Investment Co. and a leader in Nebraska's Bhutanese-American community — helping owners manage, invest, and grow with clarity." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ============ NAV ============ -->
+  <header class="nav" data-nav>
+    <div class="container nav__inner">
+      <a href="#top" class="nav__brand">
+        <img src="assets/logo-light.png" alt="Bhim Gurung" width="146" height="33" />
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="about.html">Full bio</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#contact" class="btn btn--light nav__cta">Get in touch</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ SHOWCASE ============ -->
+    <section class="showcase" id="showcase">
+      <div class="showcase__media" data-reveal>
+        <img src="assets/heroImage.jpeg" alt="Bhim Gurung" class="showcase__photo-img" />
+      </div>
+
+      <div class="container showcase__inner">
+        <div class="showcase__body" data-reveal-group>
+          <p class="eyebrow eyebrow--light" data-reveal>Global CEO · GBMIC</p>
+          <h2 class="showcase__title" data-reveal>Helping businesses grow through strategic management.</h2>
+          <p class="showcase__lead" data-reveal>
+            Bhim Gurung leads Global Business Management &amp; Investment Co. and is a
+            trusted voice in Nebraska's Bhutanese-American community — guiding owners
+            to manage, invest, and grow with clarity.
+          </p>
+          <div class="showcase__ctas" data-reveal>
+            <a href="#contact" class="btn btn--light">Let's talk</a>
+            <a href="#services" class="btn btn--ghost-invert">See services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT / STAT ============ -->
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <p class="eyebrow" data-reveal>About</p>
+        <div class="about__lead">
+          <h2 class="h2" data-reveal>
+            Two decades of leadership across business, investment, and community.
+          </h2>
+          <p class="about__text" data-reveal>
+            Bhim Gurung leads GBMIC with a simple belief: sound management and patient
+            investment build businesses that last. Alongside his work with clients, he is a
+            trusted voice in Nebraska's Bhutanese-American community — connecting people to
+            opportunity and helping them find their footing.
+          </p>
+        </div>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__num">20+</span>
+            <span class="stat__label">Years leading businesses</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">9</span>
+            <span class="stat__label">Service areas under one roof</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">100%</span>
+            <span class="stat__label">Focused on your outcome</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BUSINESS VENTURES & ASSOCIATIONS ============ -->
+    <section class="ventures section" id="ventures">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow" data-reveal>Business Portfolio</p>
+          <h2 class="h2" data-reveal>Business ventures and associations across Omaha and beyond.</h2>
+          <p class="ventures__intro" data-reveal>From investment and real estate to community and cultural organizations — a look at the ventures under one roof.</p>
+        </div>
+
+        <div class="ventures__grid" data-reveal>
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">International Investment Corporation (IIC)</h3>
+              <p class="ventures__text">Join the International Investment Corporation (IIC) today—own real assets, grow your wealth, and be part of a powerful global investment movement!</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">Tokma Digital Corporation</h3>
+              <p class="ventures__text">Be a part of Tokma Corporation—where innovation meets opportunity. We shape the future of AI, cloud, and app technology with a global visionary team!</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">Tokma Technologies Pvt. Ltd.</h3>
+              <p class="ventures__text">Innovative IT and software company delivering custom web, app, and digital solutions that help businesses grow and scale worldwide.</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">Gurung Brothers Real Estate</h3>
+              <p class="ventures__text">Experience comfort and care with Gurung Brothers Real Estate—your trusted landlord in Omaha. Contact us today to rent an apartment or business space.</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">GB Construction &amp; Cleaning</h3>
+              <p class="ventures__text">Gurung Brother Construction and Cleaning LLC provides dependable construction, renovation, repair, and professional cleaning services for residential and commercial properties.</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">American Skyline Investment Group</h3>
+              <p class="ventures__text">Discover quality living and exceptional service with American Skyline Investment Group — Omaha's reliable landlord. Reach out today for apartments or office rentals!</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">Great Events Movies</h3>
+              <p class="ventures__text">Great Events Movies entertain audiences by screening the latest films, providing comfortable seating, concessions, and an immersive cinematic experience in Omaha.</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">Great Events Center</h3>
+              <p class="ventures__text">Premier event venue in Omaha, Nebraska, offering modern halls for weddings, conferences, and cultural events with customizable packages and top-class facilities.</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">UNHCR — Nebraska Agency for Chore Services</h3>
+              <p class="ventures__text">UNHCR offers home care services for individuals with disabilities, injuries, or illnesses, ensuring comfort and compassionate in-home support.</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">Asian Menu Restaurant</h3>
+              <p class="ventures__text">Asian Menu Restaurant is leased &amp; managed by Knyaw Mu Thai Restaurant, which offers vibrant Thai cuisine crafted by expert chefs using fresh &amp; high-quality ingredients.</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">Triratna International Foundation</h3>
+              <p class="ventures__text">Triratna Foundation is a non-profit corporation operated by monks, volunteers, and well-wishers to support peace, prosperity, and happiness and to prevent cruelty to humans and animals.</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">International Council of Gurung Buddhism (ICGB)</h3>
+              <p class="ventures__text">The International Council of Gurung Buddhism promotes Gurung Buddhism, blending Gurung cultural ideals with Buddhist principles for spiritual and cultural preservation.</p>
+            </div>
+          </article>
+
+          <article class="ventures__card">
+            <div class="ventures__media" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="48" height="48" rx="4" />
+                <circle cx="24" cy="24" r="5" />
+                <path d="M8 44 22 32l10 9 8-8 16 15" />
+              </svg>
+              <span>Image placeholder</span>
+              <div class="ventures__logo">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M32 8 56 20v10c0 16-10 24-24 26-14-2-24-10-24-26V20Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="ventures__body">
+              <h3 class="ventures__title">Gurung Buddhism Journal</h3>
+              <p class="ventures__text">A digital journal preserving Gurung cultural heritage, promoting Gurung Buddhism, and highlighting the scholarly contributions of the global Gurung Buddhist community.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES (Icon Grid) ============ -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow" data-reveal>Services</p>
+          <h2 class="h2" data-reveal>
+            Management and investment solutions that help your business grow.
+          </h2>
+          <p class="svcD__intro" data-reveal>Each service is hands-on and specific — start with what you need today, and add more as things grow.</p>
+        </div>
+
+        <div class="svcD__grid" data-reveal-group>
+          <article class="svcD__cell" data-reveal>
+            <div class="svcD__head">
+              <span class="svcD__index">01</span>
+              <h3 class="svcD__title">Business Management</h3>
+            </div>
+            <p class="svcD__text">Day-to-day operations, structure, and strategy — so the business runs the way you intended.</p>
+            <span class="svcD__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M32 10 58 30 32 50 6 30Z" />
+                <path d="M6 30h52M32 10v40" />
+                <circle cx="32" cy="30" r="1.6" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+          </article>
+
+          <article class="svcD__cell" data-reveal>
+            <div class="svcD__head">
+              <span class="svcD__index">02</span>
+              <h3 class="svcD__title">Investment Advisory</h3>
+            </div>
+            <p class="svcD__text">Patient, practical guidance on where to put capital and how to protect it over time.</p>
+            <span class="svcD__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 46h36l-8-24H22Z" />
+                <path d="M32 22v24" />
+                <path d="M32 14v8" />
+                <circle cx="32" cy="14" r="1.6" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+          </article>
+
+          <article class="svcD__cell" data-reveal>
+            <div class="svcD__head">
+              <span class="svcD__index">03</span>
+              <h3 class="svcD__title">Real Estate</h3>
+            </div>
+            <p class="svcD__text">Acquisition, leasing, and property strategy grounded in local market knowledge.</p>
+            <span class="svcD__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 50 32 14 50 50Z" />
+                <path d="M22 50V34h20v16" />
+              </svg>
+            </span>
+          </article>
+
+          <article class="svcD__cell" data-reveal>
+            <div class="svcD__head">
+              <span class="svcD__index">04</span>
+              <h3 class="svcD__title">Financial Planning</h3>
+            </div>
+            <p class="svcD__text">A clear plan for cash flow, growth, and the long game — reviewed as things change.</p>
+            <span class="svcD__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 48h10V38h10V28h10V18" />
+                <circle cx="42" cy="18" r="1.6" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+          </article>
+
+          <article class="svcD__cell" data-reveal>
+            <div class="svcD__head">
+              <span class="svcD__index">05</span>
+              <h3 class="svcD__title">Tax &amp; Accounting</h3>
+            </div>
+            <p class="svcD__text">Books kept clean and filings done right, with an eye on what you keep at year end.</p>
+            <span class="svcD__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="18" y="12" width="28" height="40" rx="1.5" />
+                <path d="M24 22h16M24 30h16M24 38h10" />
+              </svg>
+            </span>
+          </article>
+
+          <article class="svcD__cell" data-reveal>
+            <div class="svcD__head">
+              <span class="svcD__index">06</span>
+              <h3 class="svcD__title">Business Consulting</h3>
+            </div>
+            <p class="svcD__text">An outside perspective on the decisions that move the needle — pricing, hiring, expansion.</p>
+            <span class="svcD__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="26" cy="32" r="14" />
+                <circle cx="40" cy="32" r="14" />
+              </svg>
+            </span>
+          </article>
+
+          <article class="svcD__cell" data-reveal>
+            <div class="svcD__head">
+              <span class="svcD__index">07</span>
+              <h3 class="svcD__title">Insurance Services</h3>
+            </div>
+            <p class="svcD__text">Coverage matched to real risk, so a bad day never becomes a lasting setback.</p>
+            <span class="svcD__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M32 10 50 18v14c0 14-9 22-18 26-9-4-18-12-18-26V18Z" />
+              </svg>
+            </span>
+          </article>
+
+          <article class="svcD__cell" data-reveal>
+            <div class="svcD__head">
+              <span class="svcD__index">08</span>
+              <h3 class="svcD__title">Startup Advisory</h3>
+            </div>
+            <p class="svcD__text">From first idea to first customer — the practical steps that get a business off the ground.</p>
+            <span class="svcD__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 16 50 32 18 48Z" />
+                <circle cx="24" cy="32" r="1.6" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+          </article>
+
+          <article class="svcD__cell" data-reveal>
+            <div class="svcD__head">
+              <span class="svcD__index">09</span>
+              <h3 class="svcD__title">Community Support</h3>
+            </div>
+            <p class="svcD__text">Guidance and connections for Nebraska's Bhutanese-American community and its businesses.</p>
+            <span class="svcD__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="20" cy="44" r="4" />
+                <circle cx="44" cy="44" r="4" />
+                <circle cx="32" cy="18" r="4" />
+                <path d="M23 41 29 22M41 41 35 22M24 44h16" />
+              </svg>
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHO WE SERVE ============ -->
+    <section class="who section" id="who-we-serve">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow" data-reveal>Who We Serve</p>
+          <h2 class="h2" data-reveal>Serving two audiences with one goal: lasting growth.</h2>
+        </div>
+
+        <div class="who__grid" data-reveal-group>
+          <article class="who__card who__card--accent" data-reveal>
+            <span class="who__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="22" r="9" />
+                <path d="M8 52c0-10 7.2-17 16-17s16 7 16 17" />
+                <circle cx="46" cy="26" r="7" />
+                <path d="M40 52c0-7.5 5-13 13-13" />
+              </svg>
+            </span>
+            <h3 class="who__title">Bhutanese-American Community</h3>
+            <p class="who__text">Rooted in the Bhutanese-American community of Nebraska, GBMIC understands your culture, your language, and the challenges you face. We're built to serve you first.</p>
+          </article>
+
+          <article class="who__card" data-reveal>
+            <span class="who__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M32 8c9 0 16 7 16 16 0 12-16 32-16 32S16 36 16 24c0-9 7-16 16-16Z" />
+                <circle cx="32" cy="24" r="5" />
+              </svg>
+            </span>
+            <h3 class="who__title">Wider Nebraska Market</h3>
+            <p class="who__text">Our services are open to every business and family across Nebraska. Whether you're a startup, an established business, or a family seeking health care and financial guidance — we're here to help.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="why section" id="why-choose-us">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow" data-reveal>Why Choose Us</p>
+          <h2 class="h2" data-reveal>Four reasons clients choose GBMIC.</h2>
+        </div>
+
+        <div class="why__grid" data-reveal-group>
+          <article class="why__card" data-reveal>
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M32 50S12 38 12 23c0-7.2 5.6-13 12.8-13 3.6 0 6.8 1.8 7.2 5 .4-3.2 3.6-5 7.2-5C46.4 10 52 15.8 52 23c0 15-20 27-20 27Z" />
+              </svg>
+            </span>
+            <h3 class="why__title">Community Understanding</h3>
+            <p class="why__text">Clear roots in Nebraska's Bhutanese-American community, with cultural fluency and language accessibility built in.</p>
+          </article>
+
+          <article class="why__card" data-reveal>
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="32" cy="24" r="14" />
+                <path d="M24 36 20 54l12-7 12 7-4-18" />
+                <path d="M26 24 30 28 39 19" />
+              </svg>
+            </span>
+            <h3 class="why__title">Proven Track Record</h3>
+            <p class="why__text">500+ clients served in one year — real credentials, not promises.</p>
+          </article>
+
+          <article class="why__card" data-reveal>
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="20" height="20" rx="2.5" />
+                <rect x="35" y="9" width="20" height="12" rx="2.5" />
+                <rect x="35" y="27" width="20" height="18" rx="2.5" />
+                <rect x="9" y="35" width="20" height="20" rx="2.5" />
+              </svg>
+            </span>
+            <h3 class="why__title">Comprehensive Services</h3>
+            <p class="why__text">Nine services under one roof — from health care to business management to long-term planning.</p>
+          </article>
+
+          <article class="why__card" data-reveal>
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 30h14l8-7 8 7h14" />
+                <path d="M24 30 32 38 40 30" />
+              </svg>
+            </span>
+            <h3 class="why__title">Hands-On Approach</h3>
+            <p class="why__text">Direct, personal guidance from the GBMIC team — never distant, never outsourced.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="process section" id="process">
+      <div class="container process__grid">
+        <div class="process__intro" data-reveal-group>
+          <p class="eyebrow" data-reveal>Process</p>
+          <h2 class="h2" data-reveal>
+            A clear path from first call to a lasting partnership.
+          </h2>
+        </div>
+
+        <ol class="steps" data-reveal-group>
+          <li class="step" data-reveal>
+            <span class="step__num">01</span>
+            <div class="step__body">
+              <h3 class="step__title">Book a call</h3>
+              <p class="step__text">We start with a conversation about where the business is and where you want it to go.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">02</span>
+            <div class="step__body">
+              <h3 class="step__title">Discovery</h3>
+              <p class="step__text">A close look at the numbers, the operation, and the opportunities on the table.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">03</span>
+            <div class="step__body">
+              <h3 class="step__title">Strategy</h3>
+              <p class="step__text">A plan you can act on — priorities, timelines, and the reasoning behind each.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">04</span>
+            <div class="step__body">
+              <h3 class="step__title">Execution</h3>
+              <p class="step__text">Hands-on support putting the plan to work, adjusting as reality comes in.</p>
+            </div>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">05</span>
+            <div class="step__body">
+              <h3 class="step__title">Ongoing support</h3>
+              <p class="step__text">A steady partner for the decisions that keep coming after the launch.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testi section" id="testimonials">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow" data-reveal>Testimonials</p>
+          <h2 class="h2" data-reveal>What our clients say.</h2>
+          <p class="testi__intro" data-reveal>Real feedback, real results, real people.</p>
+        </div>
+
+        <div class="testi__grid" data-reveal-group>
+          <figure class="testi__card" data-reveal>
+            <span class="testi__mark" aria-hidden="true">
+              <svg viewBox="0 0 48 36" fill="currentColor"><path d="M0 36V20.2C0 8.6 6.8 1.4 18.6 0l2 5.6C13.4 7.4 10 11.6 10 17.4h8.6V36H0Zm27.4 0V20.2c0-11.6 6.8-18.8 18.6-20.2l2 5.6c-7.2 1.8-10.6 6-10.6 11.8H46V36H27.4Z"/></svg>
+            </span>
+            <blockquote class="testi__quote">GBMIC helped us navigate starting a business in Nebraska. They understood exactly what we needed.</blockquote>
+            <figcaption class="testi__by">Small Business Owner</figcaption>
+          </figure>
+
+          <figure class="testi__card" data-reveal>
+            <span class="testi__mark" aria-hidden="true">
+              <svg viewBox="0 0 48 36" fill="currentColor"><path d="M0 36V20.2C0 8.6 6.8 1.4 18.6 0l2 5.6C13.4 7.4 10 11.6 10 17.4h8.6V36H0Zm27.4 0V20.2c0-11.6 6.8-18.8 18.6-20.2l2 5.6c-7.2 1.8-10.6 6-10.6 11.8H46V36H27.4Z"/></svg>
+            </span>
+            <blockquote class="testi__quote">The health care guidance we received was exceptional. They truly care about the community.</blockquote>
+            <figcaption class="testi__by">Health Care Client</figcaption>
+          </figure>
+
+          <figure class="testi__card" data-reveal>
+            <span class="testi__mark" aria-hidden="true">
+              <svg viewBox="0 0 48 36" fill="currentColor"><path d="M0 36V20.2C0 8.6 6.8 1.4 18.6 0l2 5.6C13.4 7.4 10 11.6 10 17.4h8.6V36H0Zm27.4 0V20.2c0-11.6 6.8-18.8 18.6-20.2l2 5.6c-7.2 1.8-10.6 6-10.6 11.8H46V36H27.4Z"/></svg>
+            </span>
+            <blockquote class="testi__quote">Professional, accessible, and always available. I recommend GBMIC to everyone.</blockquote>
+            <figcaption class="testi__by">Community Member</figcaption>
+          </figure>
+
+          <figure class="testi__card" data-reveal>
+            <span class="testi__mark" aria-hidden="true">
+              <svg viewBox="0 0 48 36" fill="currentColor"><path d="M0 36V20.2C0 8.6 6.8 1.4 18.6 0l2 5.6C13.4 7.4 10 11.6 10 17.4h8.6V36H0Zm27.4 0V20.2c0-11.6 6.8-18.8 18.6-20.2l2 5.6c-7.2 1.8-10.6 6-10.6 11.8H46V36H27.4Z"/></svg>
+            </span>
+            <blockquote class="testi__quote">Great guidance, practical support, and a steady partner for the decisions that matter.</blockquote>
+            <figcaption class="testi__by">Long-Term Client</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq section" id="faq">
+      <div class="container faq__grid">
+        <div class="faq__head" data-reveal-group>
+          <p class="eyebrow" data-reveal>FAQ</p>
+          <h2 class="h2" data-reveal>Answers to the questions that come up most.</h2>
+          <a href="#contact" class="btn btn--ghost" data-reveal>Still curious? Ask directly</a>
+        </div>
+
+        <div class="faq__list" data-reveal-group>
+          <details class="qa" data-reveal open>
+            <summary>What kinds of businesses do you work with?</summary>
+            <p>Owner-run businesses across health care, real estate, restaurants, and retail — small to mid-size, at any stage.</p>
+          </details>
+          <details class="qa" data-reveal>
+            <summary>How does the first consultation work?</summary>
+            <p>It's a straightforward conversation — no cost, no obligation. We talk through your situation and whether we're a good fit.</p>
+          </details>
+          <details class="qa" data-reveal>
+            <summary>Do you help with investment and financing?</summary>
+            <p>Yes. Investment advisory and financial planning are core to GBMIC, alongside day-to-day management support.</p>
+          </details>
+          <details class="qa" data-reveal>
+            <summary>Do you support the Bhutanese-American community directly?</summary>
+            <p>Yes. Bhim is an active community leader in Nebraska and regularly connects members to guidance and opportunity.</p>
+          </details>
+          <details class="qa" data-reveal>
+            <summary>How do I get started?</summary>
+            <p>Send a note through the form below or email <a href="mailto:contact@bhimgurung.com">contact@bhimgurung.com</a> — you'll hear back personally.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / CTA (DARK) ============ -->
+    <section class="contact section section--dark" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__intro" data-reveal-group>
+          <h2 class="h2 h2--light contact__title" data-reveal>
+            Let's talk business.<br />I'll take it from there.
+          </h2>
+          <ul class="contact__list" data-reveal>
+            <li><span>Address</span><span>7440 Crown Point Ave, Omaha, NE 68134, United States</span></li>
+            <li><span>Phone</span><a href="tel:+14023121435">(402) 312-1435</a></li>
+            <li><span>Fax</span><span>(402) 885-895</span></li>
+            <li><span>Email</span><a href="mailto:contact@bhimgurung.com">contact@bhimgurung.com</a></li>
+            <li><span>Personal</span><a href="https://bhimgurung.com" target="_blank" rel="noopener">bhimgurung.com</a></li>
+            <li><span>Company</span><a href="https://gbmic360.com" target="_blank" rel="noopener">gbmic360.com</a></li>
+          </ul>
+        </div>
+
+        <form class="contact__form" data-reveal novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+            <span class="field__error" data-error></span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <span class="field__error" data-error></span>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span class="field__error" data-error></span>
+          </div>
+          <!-- Honeypot (spam trap) -->
+          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn--light">Send message</button>
+          <p class="form__status" data-form-status role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer section--dark">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-dark.png" alt="Bhim Gurung" class="footer__logo" width="176" height="40" />
+        <span class="footer__role">Global CEO · GBMIC</span>
+      </div>
+      <nav class="footer__col" aria-label="Footer">
+        <span class="footer__label">Explore</span>
+        <a href="#about">About</a>
+        <a href="about.html">Full bio</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="footer__col">
+        <span class="footer__label">Contact</span>
+        <a href="mailto:contact@bhimgurung.com">contact@bhimgurung.com</a>
+        <a href="https://gbmic360.com" target="_blank" rel="noopener">gbmic360.com</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Social</span>
+        <a href="#">LinkedIn</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <span>© 2026 Bhim Gurung · Global Business Management &amp; Investment Co.</span>
+      <a href="#top" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="js/main.js" defer></script>
+
+  <!-- ============ AGENTATION (dev-only, localhost) ============
+       Visual annotation widget for AI coding agents. Lives in its own
+       gitignored file (js/agentation.dev.js) so it's never committed
+       or pushed to the live site — this <script> tag just 404s
+       harmlessly in production if that file isn't present. -->
+  <script type="module" src="js/agentation.dev.js"></script>
+</body>
+</html>

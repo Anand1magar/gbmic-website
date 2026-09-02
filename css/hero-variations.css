@@ -1,0 +1,225 @@
+/* =========================================================
+   Hero layout variations — preview only.
+   Reuses tokens/components from styles.css (colors, buttons,
+   container, .eyebrow, .hero__badge). Adds only the grid/media
+   rules unique to each variation.
+   ========================================================= */
+
+.compare-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px var(--pad-x);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  font-weight: 500;
+}
+.compare-bar span { color: var(--muted); margin-right: 8px; }
+.compare-bar a {
+  padding: 7px 14px;
+  border-radius: var(--r-pill);
+  color: var(--ink);
+}
+.compare-bar a:hover { background: var(--paper); }
+
+.variant-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--r-pill);
+  background: var(--ink);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.variant-label small { color: var(--muted-dark); font-weight: 400; text-transform: none; letter-spacing: 0; }
+
+/* =========================================================
+   VARIANT 1 — Classic Split
+   ========================================================= */
+.heroA { padding-block: 88px 96px; background: var(--white); }
+.heroA__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px 64px;
+  align-items: center;
+}
+.heroA__body { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
+.heroA__title {
+  font-size: clamp(36px, 4.6vw, 58px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  max-width: 14ch;
+}
+.heroA__text { font-size: 18px; color: var(--muted); line-height: 1.55; max-width: 42ch; }
+.heroA__ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+
+.heroA__media {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  box-shadow: var(--shadow-hover);
+}
+.heroA__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 12%; }
+
+@media (max-width: 900px) {
+  .heroA__grid { grid-template-columns: 1fr; }
+  .heroA__title { max-width: 20ch; }
+  .heroA__media { aspect-ratio: 4 / 3; }
+}
+
+/* =========================================================
+   VARIANT 2 — Editorial Bleed
+   ========================================================= */
+.heroB { background: var(--paper); overflow: hidden; }
+.heroB__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 560px) 1fr;
+  align-items: stretch;
+  min-height: 620px;
+  max-width: 1760px;
+  margin-inline: auto;
+}
+.heroB__body {
+  padding-inline-start: max(24px, calc((100vw - 1120px) / 2 + 24px));
+  padding-inline-end: 40px;
+  padding-block: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+}
+.heroB__title {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+.heroB__title .accent { color: var(--accent); }
+.heroB__text { font-size: 17px; color: var(--muted); line-height: 1.55; max-width: 40ch; }
+
+.heroB__stats { display: flex; gap: 0; margin-top: 4px; }
+.heroB__stats li { padding-inline: 20px; }
+.heroB__stats li:first-child { padding-inline-start: 0; }
+.heroB__stats li + li { border-left: 1px solid var(--line); }
+.heroB__stats strong { display: block; font-size: 22px; font-weight: 500; letter-spacing: -0.02em; }
+.heroB__stats span { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.02em; }
+
+.heroB__ctas { margin-top: 6px; }
+
+.heroB__media { position: relative; overflow: hidden; border-radius: 40px 0 0 40px; }
+.heroB__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+.heroB__badge {
+  position: absolute;
+  top: auto;
+  bottom: 24px;
+  left: 24px;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .heroB__grid { grid-template-columns: 1fr; min-height: 0; }
+  .heroB__body { padding-inline: var(--pad-x); padding-block: 72px 40px; }
+  .heroB__media { border-radius: 0; height: 380px; }
+  .heroB__stats { flex-wrap: wrap; row-gap: 16px; }
+}
+
+/* =========================================================
+   VARIANT 3 — Layered Card
+   ========================================================= */
+.heroC { padding-block: 96px 100px; background: var(--white); }
+.heroC__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  gap: 40px 70px;
+  align-items: center;
+}
+.heroC__body { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.heroC__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: var(--r-pill);
+  background: var(--tint-green);
+  color: #0f7a43;
+  font-size: 13px;
+  font-weight: 500;
+}
+.heroC__pill .dot { width: 7px; height: 7px; border-radius: 50%; background: #12b76a; }
+.heroC__title {
+  font-size: clamp(34px, 4.6vw, 52px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 15ch;
+}
+.heroC__text { font-size: 17px; color: var(--muted); line-height: 1.55; max-width: 42ch; }
+.heroC__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.heroC__stats {
+  display: flex;
+  width: 100%;
+  max-width: 460px;
+  margin-top: 10px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.heroC__stats li { flex: 1; padding-inline-end: 20px; }
+.heroC__stats li + li { padding-inline-start: 20px; border-left: 1px solid var(--line); }
+.heroC__stats strong { display: block; font-size: 24px; font-weight: 500; letter-spacing: -0.02em; }
+.heroC__stats span { display: block; font-size: 12.5px; color: var(--muted); margin-top: 2px; line-height: 1.3; }
+
+.heroC__media { position: relative; }
+.heroC__shape {
+  position: absolute;
+  inset: 26px -26px -26px 26px;
+  background: var(--tint-rose);
+  border-radius: var(--r-xl);
+  z-index: 0;
+}
+.heroC__photo {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  box-shadow: var(--shadow-hover);
+}
+.heroC__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 12%; }
+.heroC__quote {
+  position: absolute;
+  z-index: 2;
+  left: -32px;
+  bottom: -32px;
+  max-width: 240px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-hover);
+}
+.heroC__quote-mark { display: block; font-size: 30px; line-height: 1; font-weight: 600; color: var(--accent); margin-bottom: 6px; }
+.heroC__quote p { font-size: 14px; line-height: 1.42; color: var(--ink); }
+
+@media (max-width: 900px) {
+  .heroC__grid { grid-template-columns: 1fr; }
+  .heroC__shape { display: none; }
+  .heroC__quote { position: relative; left: auto; bottom: auto; margin-top: -36px; margin-inline: 20px 0; width: calc(100% - 20px); }
+  .heroC__stats { max-width: none; }
+}
+@media (max-width: 560px) {
+  .heroC__stats { flex-direction: column; gap: 14px; }
+  .heroC__stats li + li { padding-inline-start: 0; border-left: none; padding-top: 14px; border-top: 1px solid var(--line); }
+}

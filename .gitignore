@@ -1,0 +1,19 @@
+# Dev-only AI agent annotation widget — never ship to production
+js/agentation.dev.js
+
+# Secrets / env
+.env
+.env.local
+.env*.local
+
+# Vercel (local link + generated tokens — never commit)
+.vercel
+
+# Local agent / editor state
+.claude/
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
