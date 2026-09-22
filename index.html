@@ -745,10 +745,19 @@
   <script src="js/main.js?v=2" defer></script>
 
   <!-- ============ AGENTATION (dev-only, localhost) ============
-       Visual annotation widget for AI coding agents. Lives in its own
-       gitignored file (js/agentation.dev.js) so it's never committed
-       or pushed to the live site — this <script> tag just 404s
-       harmlessly in production if that file isn't present. -->
-  <script type="module" src="js/agentation.dev.js"></script>
+       Visual annotation widget for AI coding agents. The script itself
+       lives in a gitignored file (js/agentation.dev.js) and is never
+       committed, so it is absent in production — loaded here only on
+       localhost so the live site never requests a file that isn't there. -->
+  <script>
+    (function () {
+      var local = ["localhost", "127.0.0.1", "[::1]", ""];
+      if (local.indexOf(location.hostname) === -1) return;
+      var s = document.createElement("script");
+      s.type = "module";
+      s.src = "js/agentation.dev.js";
+      document.body.appendChild(s);
+    })();
+  </script>
 </body>
 </html>
