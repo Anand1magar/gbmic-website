@@ -1,98 +1,25 @@
-# Design System — Bhim Gurung Website
+# Design — Figma look and feel
 
-Extracted from the referenced Figma design (UX Bootcamp · Visa Vista / editorial personal-portfolio style).
-This is the single source of truth for the site's look and feel.
+This is the design system source of truth for this site. It was extracted directly from a Figma reference frame — not invented — so treat every value in the linked files as a real constraint, not a suggestion.
 
-**Feel:** Elegant, editorial, minimal. Generous whitespace, quiet confidence, rounded cards,
-one restrained orange accent (the brand-logo orange), alternating light/dark sections. Big
-headlines with tight negative letter-spacing. Everything calm and premium — nothing loud.
+**Source:** [Figma — UI Exploration · FieldTime BuildWitt](https://www.figma.com/design/rCZnwKVRQEaqrsfC31FyKC/UI-Exploration---FieldTime-BuildWitt?node-id=5256-34891), frame "Elite - Framer Template for Consultants / Agencies" (node `5256:34891`). Extracted 2026-09-17.
 
----
+## The one-sentence summary
 
-## Colors
+**Monochrome, sharp-edged, editorial.** Near-black ink on off-white paper, zero border-radius except full circles, no shadows, huge section whitespace, tight-tracked large display type, and full-bleed grayscale-toned photography carrying all the visual color. There is no brand accent hue anywhere in this reference.
 
-| Token            | Hex        | Role                                             |
-|------------------|------------|--------------------------------------------------|
-| `--ink`          | `#111111`  | Primary text, near-black                         |
-| `--ink-soft`     | `#1f1f1f`  | Dark section surfaces                             |
-| `--muted`        | `#6c7179`  | Secondary text, captions                         |
-| `--line`         | `#d1d3d6`  | Borders, hairline dividers                        |
-| `--paper`        | `#f7f7f7`  | Scaffold / section background                     |
-| `--white`        | `#ffffff`  | Cards, base background                            |
-| `--accent`       | `#f1582d`  | Brand orange (logo mark) — highlight card, links  |
-| `--tint-cream`   | `#fefee8`  | Soft badge tint                                   |
-| `--tint-rose`    | `#fdeee7`  | Soft badge tint (light wash of brand orange)      |
-| `--tint-green`   | `#eefff3`  | Soft badge tint / "available" state              |
+## Read these in order
 
-Use the orange accent sparingly — one highlighted moment per screen, not scattered.
+1. **[design/colors.md](design/colors.md)** — the (deliberately tiny) palette: ink, paper, two grays, and how borders/scrims are built from translucent washes rather than flat colors.
+2. **[design/typography.md](design/typography.md)** — the Geist type scale, the exact tracking/leading values per size, and the eyebrow-label + H2 pairing convention.
+3. **[design/spacing-layout.md](design/spacing-layout.md)** — "how it looks": radius (0 by default), elevation (flat, no shadows), the spacing scale, and the grid/section rhythm.
+4. **[design/imagery-icons.md](design/imagery-icons.md)** — photography treatment, the floating callout-card motif, and the hand-built bar-icon language.
+5. **[design/components.md](design/components.md)** — CTA links, circular icon chips, FAQ accordion states, and the logo strip.
+6. **[design/motion.md](design/motion.md)** — timing and easing policy. (Flagged clearly: the source Figma file has no prototype animation attached, so this file is an inferred policy, not an extraction.)
+7. **[design/tokens.css](design/tokens.css)** — every value above as copy-pasteable CSS custom properties. Reference only; not wired into `css/styles.css`.
 
----
+## Using this when building or changing the site
 
-## Typography
-
-**Family:** `Instrument Sans` (variable, width axis) for everything, with a system sans fallback.
-Only two weights in play: **Medium (500)** for display/labels, **Regular (400)** for body.
-
-| Role         | Size (clamp target) | Weight | Line height | Letter-spacing |
-|--------------|---------------------|--------|-------------|----------------|
-| Display / H1 | 40–64px             | 500    | 1.05–1.1    | −1.44px        |
-| Section / H2 | 36px                | 500    | 1.2         | −0.72px        |
-| Card / H3    | 24px                | 500    | 1.3         | −0.6px         |
-| Body large   | 20px                | 400    | 1.3         | −0.6px         |
-| Body         | 16px                | 400    | 1.4         | −0.48px        |
-| Eyebrow/label| 16px                | 500    | 1.3         | −0.48px        |
-
-Negative tracking scales with size — the bigger the type, the tighter it sets.
-
----
-
-## Spacing & Layout
-
-- **Container:** max-width `1120px`, side padding `24px` (mobile `20px`).
-- **Section rhythm:** vertical padding `clamp(96px, 12vw, 200px)` — the whitespace is the design.
-- **Grid gaps:** `12 / 16 / 20 / 32 / 40 / 80px`.
-- **Card padding:** `24px`.
-
-## Radii
-
-| Token        | Value    | Use                              |
-|--------------|----------|----------------------------------|
-| `--r-sm`     | `12px`   | Default — inputs, small cards     |
-| `--r-md`     | `20px`   | Cards                            |
-| `--r-lg`     | `24px`   | Feature cards                    |
-| `--r-xl`     | `40px`   | Hero image, big panels           |
-| `--r-pill`   | `100px`  | Buttons, badges                  |
-
-## Shadows
-
-Subtle and layered — never heavy. Cards lift only slightly on hover.
-`0 1px 2px rgba(17,17,17,.04), 0 12px 32px -12px rgba(17,17,17,.10)`
-
----
-
-## Components
-
-- **Buttons:** pill (`--r-pill`). Primary = `--ink` bg / white text. Ghost = transparent with `--line` border.
-- **Badges:** pill, tinted background (`--tint-*`), small medium-weight label; "available" uses green dot + `--tint-green`.
-- **Cards:** white, `--r-lg`, hairline `--line` border, `24px` padding. One highlighted card may use `--accent` bg / white text.
-- **Nav:** minimal — wordmark left, center links, pill CTA right. Sticky, blurs on scroll.
-- **Dark sections** (Process, final CTA, Footer): `--ink-soft` / `--ink` background, white text, muted = lightened gray.
-
----
-
-## Motion
-
-Deliberately quiet — subtle, not loud. No parallax, no animation library; plain CSS
-transitions driven by a small vanilla `IntersectionObserver` for scroll reveal.
-
-- **Load:** a single, brief CSS fade/rise on the hero (media, badge, title, aside) — no JS
-  dependency, so content is never hidden waiting on a script or font.
-- **Scroll reveal:** elements marked `data-reveal` fade + rise into place once, the first
-  time they cross into the viewport (`~0.7s`, no re-hide on scroll-up). Siblings inside a
-  `data-reveal-group` cascade in with a short stagger (`~70ms` per item) instead of
-  popping in together. Progressive enhancement throughout: without JS (or if it fails to
-  load), everything stays fully visible — the hidden state only applies once a `.js`
-  class is present, so content is never hidden waiting on a script.
-- **Hover:** buttons and cards lift subtly via CSS transitions (`~0.25–0.4s`, gentle easing).
-- **Accessibility:** the load fade and the scroll reveal are both skipped entirely under
-  `prefers-reduced-motion` — everything renders in its final state immediately.
+- When asked to build new UI, match a page to "the Figma design," or keep the site "on brand," treat the files above as the spec — don't fall back on generic defaults (rounded corners, drop shadows, an accent color) that contradict what's documented here.
+- If something isn't covered here (a component type that doesn't appear in the reference frame), extend the existing patterns — the section anatomy in [spacing-layout.md](design/spacing-layout.md#section-anatomy-recurring-pattern) and the eyebrow+H2 convention in [typography.md](design/typography.md) — rather than inventing a new visual language.
+- **Note:** the current live site (`css/styles.css`) uses a different look — an orange accent (`#f1582d`), soft rounded corners (12–40px radii), and Instrument Sans. That's the *old* look. This Design.md describes the *target* look to move toward, not what's currently implemented.

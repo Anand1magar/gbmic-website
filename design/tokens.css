@@ -1,0 +1,74 @@
+/*
+  Design tokens extracted from the Figma reference (see ../Design.md for source link).
+  This file is a reference implementation of the values documented in colors.md,
+  typography.md, spacing-layout.md and motion.md — it is NOT wired into css/styles.css.
+  Copy the variables you need into the site's real stylesheet when implementing
+  this look; don't just @import this file wholesale over the existing brand tokens.
+*/
+
+:root {
+  /* ---- Color: colors.md ---- */
+  --ink: #081014;
+  --ink-alt: #121214;
+  --paper: #f2f3f5;
+  --white: #ffffff;
+  --muted: #707070;
+  --muted-on-dark: #c8c8c8;
+
+  --border-on-light: rgba(8, 16, 20, 0.12);
+  --border-on-light-strong: rgba(8, 16, 20, 0.4);
+  --border-on-light-active: #081014;
+  --border-on-dark: rgba(255, 255, 255, 0.08);
+  --border-on-dark-strong: rgba(255, 255, 255, 0.12);
+
+  --scrim-hero: linear-gradient(to bottom, rgba(8, 16, 20, 0) 33%, #081014 100%);
+  --scrim-card: linear-gradient(to bottom, rgba(18, 18, 20, 0) 24.6%, #121214 100%);
+
+  /* ---- Typography: typography.md ---- */
+  --font-display: "Geist", "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --fs-h1: 72px;      --ls-h1: -4.32px;  --lh-h1: 79.2px;
+  --fs-h2: 52px;      --ls-h2: -3.12px;  --lh-h2: 57.2px;
+  --fs-h3: 24px;      --ls-h3: -0.96px;  --lh-h3: 28.8px;
+  --fs-h4: 20px;      --ls-h4: -0.4px;   --lh-h4: 24px;
+  --fs-body-lg: 18px;                    --lh-body-lg: 25.2px;
+  --fs-body: 16px;                       --lh-body: 24px;
+  --fs-small: 14px;   --ls-label-sm: 0.84px;  --lh-small: 19.6px;
+  --fs-micro: 12px;   --ls-label-xs: 0.72px;  --lh-micro: 16.8px;
+
+  /* ---- Radius: spacing-layout.md ---- */
+  --radius-none: 0px;
+  --radius-full: 100px;
+
+  /* ---- Spacing scale: spacing-layout.md ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 10px;
+  --space-4: 12px;
+  --space-5: 16px;
+  --space-6: 20px;
+  --space-7: 24px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-11: 44px;
+  --space-12: 50px;
+  --space-13: 56px;
+  --space-14: 60px;
+  --space-15: 72px;
+  --space-section-sm: 112px;
+  --space-section-md: 120px;
+  --space-section-lg: 140px;
+  --space-section-xl: 160px;
+
+  /* ---- Layout: spacing-layout.md ---- */
+  --frame-width: 1440px;
+  --content-max-width: 1200px;
+  --gutter: 120px;
+
+  /* ---- Motion: motion.md ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 500ms;
+}

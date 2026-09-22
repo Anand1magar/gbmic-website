@@ -1,5 +1,5 @@
 /* =========================================================
-   Bhim Gurung — interactions (vanilla, no animation libraries)
+   GBMIC — interactions (vanilla, no animation libraries)
    Nav scrolled state, mobile menu, anchor navigation, scroll
    reveal, and contact-form validation. Reveal is intentionally
    minimal: a one-time fade + rise per element, no parallax.
@@ -102,95 +102,111 @@
   });
 
   /* -------------------------------------------------
-     Team carousel: horizontal scroll-snap track with
-     prev/next arrows, a scroll-progress bar, and
-     click-to-open bio panels (one open at a time).
-     No-JS fallback: plain scroll row, bios on focus.
+     Accordion: animated <details> disclosure. Native details
+     snap open, and a native `name` group closes siblings with
+     no transition — so exclusivity is handled here instead,
+     letting both the opening and the closing row animate.
   ------------------------------------------------- */
-  doc.querySelectorAll("[data-team-carousel]").forEach(function (carousel) {
-    var track = carousel.querySelector("[data-team-track]");
-    if (!track) return;
-    var cards = carousel.querySelectorAll(".team__card");
-    var prevBtn = carousel.querySelector("[data-team-prev]");
-    var nextBtn = carousel.querySelector("[data-team-next]");
-    var progress = carousel.querySelector("[data-team-progress]");
-    var controls = carousel.querySelector(".team__controls");
+  doc.querySelectorAll("[data-accordion]").forEach(function (acc) {
+    var items = [].slice.call(acc.querySelectorAll("details"));
 
-    function maxScroll() { return track.scrollWidth - track.clientWidth; }
+    function panelOf(item) { return item.querySelector(".aboutAcc__panel"); }
 
-    function stepWidth() {
-      var card = track.querySelector(".team__card");
-      if (!card) return track.clientWidth * 0.8;
-      var styles = getComputedStyle(track);
-      var gap = parseInt(styles.columnGap || styles.gap, 10) || 20;
-      return card.offsetWidth + gap;
-    }
-
-    function update() {
-      var max = maxScroll();
-      if (controls) controls.style.display = max > 4 ? "" : "none";
-      if (max <= 4) return;
-      var frac = track.clientWidth / track.scrollWidth;
-      var w = Math.max(frac * 100, 14);
-      var ratio = track.scrollLeft / max;
-      if (progress) {
-        progress.style.width = w + "%";
-        progress.style.left = ratio * (100 - w) + "%";
+    // Animations are interruptible: a click mid-flight reverses from
+    // wherever the fold currently is, so fast clicking never desyncs.
+    function cancel(item) {
+      if (item._accDone) {
+        panelOf(item).removeEventListener("transitionend", item._accDone);
+        item._accDone = null;
       }
-      if (prevBtn) prevBtn.disabled = track.scrollLeft <= 2;
-      if (nextBtn) nextBtn.disabled = track.scrollLeft >= max - 2;
     }
 
-    function nudge(dir) {
-      track.scrollBy({ left: dir * stepWidth(), behavior: reduceMotion ? "auto" : "smooth" });
+    function setOpen(item, open) {
+      var panel = panelOf(item);
+      if (!panel) return;
+      cancel(item);
+
+      if (reduceMotion) {
+        item.open = open;
+        item.classList.remove("is-closing");
+        panel.style.height = "";
+        return;
+      }
+
+      // measure where we are now (mid-animation or at rest)
+      var from = panel.getBoundingClientRect().height;
+      if (!item.open) from = 0;
+
+      // [open] must stay on through a collapse or the browser stops
+      // rendering the content; .is-closing fades the copy meanwhile.
+      item.open = true;
+      item.classList.toggle("is-closing", !open);
+
+      panel.style.height = from + "px";
+      void panel.offsetHeight;                       // commit the start value
+      var to = open ? panel.scrollHeight : 0;
+      panel.style.height = to + "px";
+
+      item._accDone = function (e) {
+        if (e.propertyName !== "height" || e.target !== panel) return;
+        cancel(item);
+        item.open = open;
+        item.classList.remove("is-closing");
+        panel.style.height = "";                     // release to auto
+      };
+      panel.addEventListener("transitionend", item._accDone);
     }
 
-    function closeAll(except) {
-      cards.forEach(function (card) {
-        if (card === except) return;
-        card.classList.remove("is-open");
-        var btn = card.querySelector(".team__toggle");
-        var bio = card.querySelector(".team__bio");
-        if (btn) btn.setAttribute("aria-expanded", "false");
-        if (bio) bio.setAttribute("aria-hidden", "true");
+    items.forEach(function (item) {
+      var summary = item.querySelector("summary");
+      if (!summary) return;
+
+      summary.addEventListener("click", function (e) {
+        e.preventDefault();
+        // .is-closing means it is open-but-collapsing, so treat it as closed
+        var isOpen = item.open && !item.classList.contains("is-closing");
+        if (isOpen) {
+          setOpen(item, false);
+        } else {
+          items.forEach(function (other) {
+            if (other !== item && other.open) setOpen(other, false);
+          });
+          setOpen(item, true);
+        }
       });
+    });
+  });
+
+  /* -------------------------------------------------
+     Biz explorer: a text index that cross-fades a stacked
+     photo panel (Our Companies). Images are all in the DOM
+     and toggled by opacity, so swapping never flashes.
+  ------------------------------------------------- */
+  doc.querySelectorAll("[data-biz-explorer]").forEach(function (explorer) {
+    var tabs = explorer.querySelectorAll("[data-biz-tab]");
+    var imgs = explorer.querySelectorAll("[data-biz-img]");
+    var textEl = explorer.querySelector("[data-biz-text]");
+
+    function activate(tab) {
+      var i = tab.dataset.index;
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      imgs.forEach(function (img) {
+        img.classList.toggle("is-shown", img.dataset.index === i);
+      });
+      if (textEl) textEl.textContent = tab.dataset.text;
     }
 
-    cards.forEach(function (card) {
-      var btn = card.querySelector(".team__toggle");
-      var bio = card.querySelector(".team__bio");
-      if (!btn) return;
-
-      function setOpen(open) {
-        if (open) closeAll(card);
-        card.classList.toggle("is-open", open);
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-        if (bio) bio.setAttribute("aria-hidden", open ? "false" : "true");
-      }
-
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () { activate(tab); });
+      tab.addEventListener("focus", function () { activate(tab); });
       if (hoverCapable) {
-        // Open on hover; click still toggles (and is the path on touch).
-        card.addEventListener("mouseenter", function () { setOpen(true); });
-        card.addEventListener("mouseleave", function () { setOpen(false); });
+        tab.addEventListener("mouseenter", function () { activate(tab); });
       }
-      btn.addEventListener("click", function () {
-        setOpen(!card.classList.contains("is-open"));
-      });
     });
-
-    if (prevBtn) prevBtn.addEventListener("click", function () { nudge(-1); });
-    if (nextBtn) nextBtn.addEventListener("click", function () { nudge(1); });
-    track.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-
-    doc.addEventListener("click", function (e) {
-      if (!carousel.contains(e.target)) closeAll(null);
-    });
-    doc.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" || e.key === "Esc") closeAll(null);
-    });
-
-    update();
   });
 
   /* -------------------------------------------------
@@ -251,8 +267,8 @@
     if (!ok) { if (statusEl) statusEl.textContent = ""; return; }
 
     // No backend yet — wire this to Formspree/Getform or a serverless
-    // endpoint to actually deliver mail to contact@bhimgurung.com.
-    if (statusEl) statusEl.textContent = "Thanks — your message has been sent. Bhim will be in touch.";
+    // endpoint to actually deliver mail to gmic.nepal@gmail.com.
+    if (statusEl) statusEl.textContent = "Thanks — your message has been sent. The GBMIC team will be in touch.";
     form.reset();
   });
 })();

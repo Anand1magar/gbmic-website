@@ -1,5 +1,5 @@
 /* =========================================================
-   About page — Bhim Gurung
+   About page — GBMIC
    Page-specific styles layered on top of css/styles.css.
    Reuses the shared design system (color, type, radii, nav,
    footer, buttons) defined in Design.md.
@@ -24,9 +24,9 @@
 }
 .bioHero__name {
   font-size: clamp(34px, 4.4vw, 52px);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.05em;
 }
 .bioHero__roles {
   font-size: 16px;
@@ -102,20 +102,20 @@
   align-items: flex-start;
   margin-top: 40px;
   padding: 40px;
-  background: var(--paper);
+  background: var(--white);
   border-radius: 0;
 }
 .calloutCard__eyebrow {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   color: var(--accent);
 }
 .calloutCard__title {
   font-size: 22px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  letter-spacing: -0.03em;
   max-width: 32ch;
 }
 .calloutCard__text {
@@ -138,7 +138,7 @@
 }
 .roleList .role:first-child { padding-top: 4px; }
 .roleList .role:last-child { border-bottom: 0; }
-.role:hover { background: var(--paper); }
+.role:hover { background: var(--white); }
 .role__org {
   font-size: 14.5px;
   font-weight: 500;
@@ -147,7 +147,7 @@
   line-height: 1.4;
 }
 .role__body { display: flex; flex-direction: column; gap: 6px; }
-.role__title { font-size: 20px; font-weight: 500; letter-spacing: -0.02em; }
+.role__title { font-size: 20px; font-weight: 400; letter-spacing: -0.03em; }
 .role__text { font-size: 15.5px; color: var(--muted); line-height: 1.55; max-width: 60ch; }
 
 /* ---------- Two-column feature grid (music) ---------- */
@@ -163,7 +163,7 @@
   padding-top: 24px;
   border-top: 1px solid var(--line);
 }
-.featureItem__title { font-size: 19px; font-weight: 500; letter-spacing: -0.01em; }
+.featureItem__title { font-size: 19px; font-weight: 400; letter-spacing: -0.02em; }
 .featureItem__text { font-size: 15.5px; color: var(--muted); line-height: 1.55; }
 
 /* ---------- Education cards ---------- */
@@ -177,17 +177,17 @@
   flex-direction: column;
   gap: 10px;
   padding: 32px 28px;
-  background: var(--paper);
+  background: var(--white);
   border-radius: 0;
 }
 .eduCard__field {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   color: var(--accent);
 }
-.eduCard__degree { font-size: 20px; font-weight: 500; letter-spacing: -0.02em; }
+.eduCard__degree { font-size: 20px; font-weight: 400; letter-spacing: -0.03em; }
 .eduCard__text { font-size: 15px; color: var(--muted); line-height: 1.5; }
 
 /* ---------- Areas of expertise ---------- */
@@ -197,7 +197,7 @@
   gap: 44px 32px;
 }
 .expertiseCol { display: flex; flex-direction: column; gap: 16px; }
-.expertiseCol__title { font-size: 17px; font-weight: 500; letter-spacing: -0.01em; }
+.expertiseCol__title { font-size: 17px; font-weight: 400; letter-spacing: -0.02em; }
 .expertiseCol__list { display: flex; flex-direction: column; gap: 9px; }
 .expertiseCol__list li {
   position: relative;
@@ -243,7 +243,7 @@
   color: var(--white);
   max-width: 26ch;
   padding-left: 26px;
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--line-dark-strong);
 }
 
 /* ---------- Professional contact (dark) ---------- */
@@ -258,8 +258,8 @@
 }
 .proContact__name {
   font-size: clamp(24px, 3vw, 30px);
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  letter-spacing: -0.04em;
   color: var(--white);
   margin-top: 6px;
 }
