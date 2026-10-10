@@ -20,14 +20,25 @@ Every size below was read directly off text nodes in the design, paired with its
 
 | Role | Size | Weight | Tracking | Leading | Color |
 |---|---|---|---|---|---|
-| Display / H1 (hero) | 72px | Regular | −4.32px (−6%) | 79.2px (1.1×) | white (on dark hero) |
-| H2 (section heading) | 52px | Regular | −3.12px (−6%) | 57.2px (1.1×) | `--ink` |
-| H3 (card/step heading) | 24px | Regular | −0.96px (−4%) | 28.8px (1.2×) | `--ink` |
-| H4 / FAQ question | 20px | Regular | −0.4px (−2%) | 24px (1.2×) | `--ink` (active) / `--muted` (inactive) |
-| Body large | 18px | Regular | 0 | 25.2px (1.4×) | `--muted-on-dark` or `--ink` |
-| Body | 16px | Regular / Medium | 0 | 22.4–24px (1.4–1.5×) | `--muted` (paragraphs) / `--ink` (labels) |
-| Small / label | 14px | Regular / SemiBold | 0 (body) / +0.84px uppercase (label) | 19.6px (1.4×) | `--muted` (body) / `--ink` (label) |
-| Micro / eyebrow | 12px | Medium | +0.72px uppercase | 16.8px (1.4×) | `--muted-on-dark` or `--ink` |
+| Hero H1 | 52px | SemiBold 600 | −0.02em | 1.1× | `--ink-hero` |
+| Contact H2 | 44px | Regular | −1.32px | 48.4px | white |
+| Process number | 38px | Regular | −0.76px | 53.2px | `rgba(8,16,20,.4)` |
+| H2 (section) | 36px | Regular | −1.62px | 41.76px | `--ink` |
+| Mission statement | 36px | Regular | 0 | 52.8px | white → `rgba(255,255,255,.6)` |
+| Client row H3 | 28px | Regular | −0.84px | 39.2px | `--ink` |
+| Testimonial quote | 24px | Regular | −0.96px | 28.8px | `--ink` |
+| Company / step row | 22px | Regular | −0.66px | 30.8px | `--ink` active, `--muted` idle |
+| H3 (tile) | 20px | Regular | −0.4px | 28px | `--ink` |
+| FAQ question | 19px | Regular | −0.38px | 26.6px | `--ink` open, `--muted` closed |
+| Body large | 17px | Regular | −0.176px | 27.2px | `--muted` |
+| Body | 16px | Regular | −0.176px | 24px | `--muted` |
+| FAQ answer | 16.5px | Regular | −0.176px | 25.575px | `--muted` |
+| Nav / button | 15px | Medium 500 | −0.176px / −0.15px | 21px | `--muted` / white |
+| Eyebrow label | 14px | SemiBold 600 | +0.84px, uppercase | 19.6px | `--muted` |
+| Testimonial meta | 12px | Medium 500 | +0.72px, uppercase | 16.8px | `--muted` |
+| Team role | 11px | Medium 500 | +0.5px, uppercase | 1.4× | `--muted-role` |
+
+**Note:** H2 is 36px here, not the 52px documented against the older template frame. Display headings are Regular weight — size and negative tracking do the work.
 
 ## The two governing rules
 

@@ -1,73 +1,92 @@
 /*
-  Design tokens extracted from the Figma reference (see ../Design.md for source link).
-  This file is a reference implementation of the values documented in colors.md,
-  typography.md, spacing-layout.md and motion.md — it is NOT wired into css/styles.css.
-  Copy the variables you need into the site's real stylesheet when implementing
-  this look; don't just @import this file wholesale over the existing brand tokens.
+  Design tokens extracted from Figma frame 5517:78048 (see ../Design.md).
+  This file is the reference list of values. The live implementation in
+  ../css/styles.css defines the same values under its own names — change
+  both together, or neither.
 */
 
 :root {
-  /* ---- Color: colors.md ---- */
-  --ink: #081014;
-  --ink-alt: #121214;
-  --paper: #f2f3f5;
+  /* ---- Ink: colors.md ---- */
+  --ink: #081014;          /* headings, body on light, button fill */
+  --ink-hero: #1c1f22;     /* hero H1 only */
+  --ink-name: #0f1215;     /* team member name */
+  --muted: #707070;        /* body copy on light, inactive rows */
+  --muted-hero: #62666a;   /* hero lead only */
+  --muted-role: #9c9c9c;   /* team role label */
+
+  /* ---- Grounds ---- */
   --white: #ffffff;
-  --muted: #707070;
-  --muted-on-dark: #c8c8c8;
+  --paper: #f2f3f5;
+  --dark-mission: #0b0c0e;
+  --dark-pillars: #111111;
+  --dark-deep: #121214;    /* contact + footer */
 
-  --border-on-light: rgba(8, 16, 20, 0.12);
-  --border-on-light-strong: rgba(8, 16, 20, 0.4);
-  --border-on-light-active: #081014;
-  --border-on-dark: rgba(255, 255, 255, 0.08);
-  --border-on-dark-strong: rgba(255, 255, 255, 0.12);
+  /* ---- Lines ---- */
+  --line: rgba(8, 16, 20, 0.12);
+  --line-dark: rgba(255, 255, 255, 0.08);
+  --field-dark: rgba(255, 255, 255, 0.04);
 
-  --scrim-hero: linear-gradient(to bottom, rgba(8, 16, 20, 0) 33%, #081014 100%);
-  --scrim-card: linear-gradient(to bottom, rgba(18, 18, 20, 0) 24.6%, #121214 100%);
+  /* ---- On dark ---- */
+  --muted-dark: #c8c8c8;
+  --link-dark: #d5d7da;
+  --mission-fade: rgba(255, 255, 255, 0.6);
+
+  /* ---- Brand accent: the only hue in the system ---- */
+  --brand-blue: #274fa2;
+  --brand-red: #ed1f24;
+  --brand-dash: linear-gradient(to right, #274fa2, #ed1f24); /* 16x2px */
 
   /* ---- Typography: typography.md ---- */
-  --font-display: "Geist", "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font: "Geist", "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  --fs-h1: 72px;      --ls-h1: -4.32px;  --lh-h1: 79.2px;
-  --fs-h2: 52px;      --ls-h2: -3.12px;  --lh-h2: 57.2px;
-  --fs-h3: 24px;      --ls-h3: -0.96px;  --lh-h3: 28.8px;
-  --fs-h4: 20px;      --ls-h4: -0.4px;   --lh-h4: 24px;
-  --fs-body-lg: 18px;                    --lh-body-lg: 25.2px;
-  --fs-body: 16px;                       --lh-body: 24px;
-  --fs-small: 14px;   --ls-label-sm: 0.84px;  --lh-small: 19.6px;
-  --fs-micro: 12px;   --ls-label-xs: 0.72px;  --lh-micro: 16.8px;
+  /* size / weight / line-height / letter-spacing */
+  --t-h1:        52px;   --lh-h1: 1.1;        /* 600 */
+  --t-h2:        36px;   --lh-h2: 41.76px;    --ls-h2: -1.62px;   /* 400 */
+  --t-contact:   44px;   --lh-contact: 48.4px; --ls-contact: -1.32px;
+  --t-mission:   36px;   --lh-mission: 52.8px;
+  --t-client:    28px;   --lh-client: 39.2px; --ls-client: -0.84px;
+  --t-quote:     24px;   --lh-quote: 28.8px;  --ls-quote: -0.96px;
+  --t-row:       22px;   --lh-row: 30.8px;    --ls-row: -0.66px;  /* process + companies */
+  --t-h3:        20px;   --lh-h3: 28px;       --ls-h3: -0.4px;
+  --t-faq:       19px;   --lh-faq: 26.6px;    --ls-faq: -0.38px;
+  --t-num:       38px;   --lh-num: 53.2px;    --ls-num: -0.76px;  /* process 01. */
+  --t-body-lg:   17px;   --lh-body-lg: 27.2px; --ls-body: -0.176px;
+  --t-body:      16px;   --lh-body: 24px;
+  --t-body-faq:  16.5px; --lh-body-faq: 25.575px;
+  --t-small:     15px;   --lh-small: 21px;
+  --t-label:     14px;   --lh-label: 19.6px;  --ls-label: 0.84px; /* eyebrow, 600 upper */
+  --t-micro:     12px;   --lh-micro: 16.8px;  --ls-micro: 0.72px;
+  --t-role:      11px;                        --ls-role: 0.5px;
 
-  /* ---- Radius: spacing-layout.md ---- */
-  --radius-none: 0px;
+  /* ---- Radius: zero everywhere except the circular avatar ---- */
+  --radius: 0px;
   --radius-full: 100px;
 
-  /* ---- Spacing scale: spacing-layout.md ---- */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 10px;
-  --space-4: 12px;
-  --space-5: 16px;
-  --space-6: 20px;
-  --space-7: 24px;
-  --space-8: 32px;
-  --space-9: 36px;
-  --space-10: 40px;
-  --space-11: 44px;
-  --space-12: 50px;
-  --space-13: 56px;
-  --space-14: 60px;
-  --space-15: 72px;
-  --space-section-sm: 112px;
-  --space-section-md: 120px;
-  --space-section-lg: 140px;
-  --space-section-xl: 160px;
-
   /* ---- Layout: spacing-layout.md ---- */
-  --frame-width: 1440px;
-  --content-max-width: 1200px;
-  --gutter: 120px;
+  --frame-width: 1920px;
+  --container: 1248px;     /* incl. 24px padding each side */
+  --content: 1200px;
+  --pad-x: 24px;
 
-  /* ---- Motion: motion.md ---- */
-  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  /* ---- Section rhythm ---- */
+  --section-y: 120px;
+  --section-y-mission-bottom: 140px;
+  --section-y-logostrip: 96px;
+  --footer-top: 110px;
+  --footer-bottom: 40px;
+  --head-to-body: 80px;    /* section head -> content block */
+
+  /* ---- Controls ---- */
+  --btn-h: 46px;
+  --btn-px: 24px;
+  --btn-h-nav: 42px;
+  --btn-px-nav: 20px;
+  --nav-h: 70px;
+  --icon: 40px;            /* services + why icons */
+  --icon-sm: 32px;         /* about accordion icons */
+
+  /* ---- Motion: motion.md (inferred, not extracted) ---- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
   --duration-fast: 150ms;
   --duration-base: 250ms;
   --duration-slow: 500ms;

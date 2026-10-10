@@ -2,20 +2,35 @@
 
 > Extracted from the Figma frame (see [Design.md](../Design.md) for source link). All values are exact hex/rgba pulled from the design context — nothing here is guessed.
 
-## The palette is deliberately monochrome
+## Near-monochrome, with exactly one hue
 
-There is **no brand accent color** anywhere in this design — no orange, no blue, nothing. The entire frame is built from near-black, white, and two grays. Color is not a design tool here; contrast, whitespace, and photography carry all of the visual weight. This is the single most important — and most different from the current GBMIC site — property of this look. Do not introduce an accent color when implementing this design; if a CTA needs emphasis, use ink-on-white / white-on-ink inversion, not a hue.
+The frame is built from near-black, white, and three grays. Contrast, whitespace, and photography carry the visual weight — not colour.
+
+The single exception is the **brand dash**: a 16×2px bar filled with `linear-gradient(to right, #274fa2, #ed1f24)`, the GBMIC logo's blue and red. It sits 8px after an eyebrow label and appears nowhere else. `#274fa2` alone also marks two active states — the current "Our Companies" row arrow and the open FAQ `+`.
+
+Three sections carry their eyebrow with **no dash**: Team, Testimonials, Why Choose Us.
+
+Never extend the accent past those spots. No coloured buttons, backgrounds, body text, borders, or links.
 
 ## Core tokens
 
 | Token | Value | Usage |
 |---|---|---|
-| `--ink` | `#081014` | Primary text, headings, icon strokes, solid dark section backgrounds, gradient scrim end-color |
-| `--ink-alt` | `#121214` | Alternate near-black used specifically as the end-stop of image scrims inside cards (very close to `--ink`, treat as the same family) |
-| `--paper` | `#f2f3f5` | Page/body background — an off-white, not pure white |
-| `--white` | `#ffffff` | Card surfaces that sit on top of `--paper` (e.g. floating callout cards) |
-| `--muted` | `#707070` | Secondary/body text on light backgrounds, inactive icon strokes |
-| `--muted-on-dark` | `#c8c8c8` | Secondary/body text on dark (`--ink`) backgrounds |
+| `--ink` | `#081014` | Headings, body on light, button fill, icon strokes |
+| `--ink-hero` | `#1c1f22` | Hero H1 only — a hair lighter than `--ink` |
+| `--ink-name` | `#0f1215` | Team member name only |
+| `--muted` | `#707070` | Body copy on light, inactive list rows, eyebrow labels |
+| `--muted-hero` | `#62666a` | Hero lead paragraph only |
+| `--muted-role` | `#9c9c9c` | Team role label (11px uppercase) |
+| `--paper` | `#f2f3f5` | The alternating off-white section ground |
+| `--white` | `#ffffff` | White sections and testimonial cards |
+| `--dark-mission` | `#0b0c0e` | Mission band |
+| `--dark-pillars` | `#111111` | About / four-divisions band |
+| `--dark-deep` | `#121214` | Contact + footer |
+| `--muted-dark` | `#c8c8c8` | Secondary text on dark |
+| `--link-dark` | `#d5d7da` | Footer links |
+| `--brand-blue` | `#274fa2` | Dash start, active-state marks |
+| `--brand-red` | `#ed1f24` | Dash end, form error text |
 
 ## Borders & dividers
 
